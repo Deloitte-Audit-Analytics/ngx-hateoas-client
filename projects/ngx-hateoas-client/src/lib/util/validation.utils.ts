@@ -27,7 +27,7 @@ export class ValidationUtils {
       }
 
       if (isNil(value)
-        || (isString(value) && !value)
+        || (isString(value) && (!value && key !== 'searchQuery'))
         || (isPlainObject(value) && isEmpty(value))
         || (isArray(value) && value.length === 0)) {
 

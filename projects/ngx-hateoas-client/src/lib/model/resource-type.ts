@@ -19,10 +19,10 @@ export function isResourceCollection(object: any): boolean {
 
 export function isPagedResourceCollection(object: any): boolean {
   return isObject(object) &&
-         ('_embedded' in object) &&
+         //('_embedded' in object) &&
          ('_links' in object) &&
          ('page' in object) &&
-         (Object.keys(object).length === 3);
+         (Object.keys(object).length >= 2);
 }
 
 /**
